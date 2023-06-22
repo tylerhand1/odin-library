@@ -11,6 +11,7 @@
     --white: #f5f6fa;
     --grey: #ced6e0;
     --black: #2d3436;
+    --orange: #ffa502;
 }
 
 html {
@@ -26,23 +27,61 @@ body {
     min-height: 100vh;
 }
 
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 72px 5fr auto;
+}
+
 header,
 footer {
     text-align: center;
 }
 
 header {
+    display: grid;
+    align-items: center;
+
     background-color: var(--white);
-    padding: 24px 0;
     box-shadow: 0px 3px 4px -4px var(--black);
 
     font-size: 24px;
+    position: sticky;
+    top: 0;
 }
 
-main {
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 
+    height: 100%;
+    padding: 24px 0 0;
+}
+
+.btn {
+    border: none;
+    border-radius: 6px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.btn-add {
+    font-size: 16px;
+    font-weight: bold;
+
+    background-color: var(--orange);
+    background-color: #f0932b;
+    color: var(--white);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-add:hover {
+    background-color: #f0932b;
+    background-color: var(--orange);
 }
 
 footer {
-
+    font-weight: bold;
+    padding-bottom: 16px;
 }
