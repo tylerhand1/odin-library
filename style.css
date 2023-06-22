@@ -7,6 +7,12 @@
     /* outline: 1px solid red; */
 }
 
+:root {
+    --white: #f5f6fa;
+    --grey: #ced6e0;
+    --black: #2d3436;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -14,10 +20,29 @@ html {
 
 body {
     font-family: 'Lato', sans-serif;
+    background-color: var(--grey);
+    color: var(--black);
+    
+    min-height: 100vh;
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+header {
+    background-color: var(--white);
+    padding: 24px 0;
+    box-shadow: 0px 3px 4px -4px var(--black);
+
+    font-size: 24px;
 }
 
 main {
+
 }
 
 footer {
+
 }
