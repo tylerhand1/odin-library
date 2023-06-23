@@ -20,46 +20,13 @@
             <div class="main-container">
                 <button class="btn btn-add">+ Add Book</button>
                 <div class="books-container">
-                    <div class="book-card">
-                        <p class="title">Lorem Ipsum</p>
-                        <p class="author">Lorem Ipsum</p>
-                        <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-green">Read</button>
-                        <button class="btn btn-remove">Remove</button>
-                    </div>
-                    <div class="book-card">
-                        <p class="title">Lorem Ipsum</p>
-                        <p class="author">Lorem Ipsum</p>
-                        <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-red">Not Read</button>
-                        <button class="btn btn-remove">Remove</button>
-                    </div>
-                    <div class="book-card">
-                        <p class="title">Lorem Ipsum</p>
-                        <p class="author">Lorem Ipsum</p>
-                        <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-red">Not Read</button>
-                        <button class="btn btn-remove">Remove</button>
-                    </div>
-                    <div class="book-card">
-                        <p class="title">Lorem Ipsum</p>
-                        <p class="author">Lorem Ipsum</p>
-                        <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-red">Not Read</button>
-                        <button class="btn btn-remove">Remove</button>
-                    </div>
-                    <div class="book-card">
-                        <p class="title">Lorem Ipsum</p>
-                        <p class="author">Lorem Ipsum</p>
-                        <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-red">Not Read</button>
-                        <button class="btn btn-remove">Remove</button>
-                    </div>
+                    
                 </div>
                 <div class="modal">
                     <div class="form-container">
-                        <form action="#" class="form">
+                        <form action="#" class="form" method="POST">
                             <h2>Add new book</h2>
+                            <p class="error">Book already in library!</p>
                             <input type="text" placeholder="Title" id="title" name="title" required>
                             <input type="text" placeholder="Author" id="author" name="author" required>
                             <input type="number" placeholder="Pages" id="pages  " name="pages " min="0" required>
@@ -67,7 +34,7 @@
                                 <label for="have-read">Have you read it?</label>
                                 <input type="checkbox" name="have-read" id="have-read">
                             </div>
-                            <button type="submit" class="btn btn-green">Submit</button>
+                            <button type="submit" class="btn btn-green" id="submit">Submit</button>
                         </form>
                     </div>
                 </div>

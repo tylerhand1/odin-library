@@ -10,6 +10,8 @@
 :root {
     --white: #f5f6fa;
     --grey: #ced6e0;
+    --btn-grey: #95a5a6;
+    --light-btn-grey: #bdc3c7;
     --black: #2d3436;
     --orange: #ffa502;
     --light-orange: #f0932b;
@@ -87,6 +89,11 @@ main {
     font-size: 16px;
     font-weight: bold;
     transition: all 0.2s ease-in-out;
+    background-color: var(--btn-grey);
+}
+
+.btn:hover {
+    background-color: var(--light-btn-grey);
 }
 
 .btn-add {
@@ -112,7 +119,8 @@ main {
     background-color: rgba(0,0,0,0.4);
 }
 
-.active {
+.active,
+p.active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,6 +166,12 @@ main {
     font-size: 28px;
 }
 
+.error {
+    display: none;
+    color: var(--red);
+    font-weight: bold;
+}
+
 .form .form-row {
     display: flex;
     justify-content: center;
@@ -196,7 +210,7 @@ input[type="checkbox"] {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 24px;
 }
 
@@ -212,6 +226,7 @@ input[type="checkbox"] {
     padding: 16px 0;
 
     font-size: 20px;
+    text-align: center;
 }
 
 .book-card .btn {
