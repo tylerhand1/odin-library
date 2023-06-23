@@ -41,7 +41,17 @@ function addToLibrary(e) {
 }
 
 function removeFromLibrary(e) {
+    const parent = e.target.parentElement;
+    const title = e.target.parentElement.children[0].textContent;
 
+    // Search for the book
+    const book = searchInLibrary(title);
+    var index = myLibrary.indexOf(book);
+    if(index !== -1) {
+        myLibrary.splice(index, 1);
+    }
+
+    parent.remove();
 }
 
 function clearForm() {
@@ -99,13 +109,7 @@ function updateBookCards() {
 function toggleReadStatus(e) {
     const title = e.target.parentElement.children[0].textContent;
     // Search for the book
-    let book;
-    console.log(myLibrary);
-    for(let i = 0; i < myLibrary.length; i++) {
-        if(title === myLibrary[i].title) {
-            book = myLibrary[i];
-        }
-    }
+    const book = searchInLibrary(title);
     // Update the book's status
     book.haveRead = !book.haveRead;
     
@@ -120,10 +124,15 @@ function toggleReadStatus(e) {
     }
 }
 
-// Buttons
+function searchInLibrary(title) {
+    for(let i = 0; i < myLibrary.length; i++) {
+        if(title === myLibrary[i].title) {
+            return myLibrary[i];
+        }
+    }
+}
 
-const deleteBtns = document.querySelectorAll('.btn-remove');
-deleteBtns.forEach(deleteBtn => deleteBtn.addEventListener('click', removeFromLibrary));
+// Buttons
 
 const submitBtn = document.querySelector('#submit');
 submitBtn.addEventListener('click', addToLibrary);
