@@ -17,6 +17,8 @@
     --light-red: #ff7979;
     --green: #27ae60;
     --light-green: #2ecc71;
+    --blue: #2980b9;
+    --border-radius: 10px;
 }
 
 html {
@@ -79,7 +81,7 @@ main {
 
 .btn {
     border: none;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     padding: 12px 16px;
     cursor: pointer;
     font-size: 16px;
@@ -116,26 +118,76 @@ main {
     align-items: center;
 }
 
-.form {
+.form-container {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 20%;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+
+    display: flex;
+    justify-content: center;
 }
 
-.modal .close {
+.form-container .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.modal .close:hover,
-.modal .close:focus {
+.form-container .close:hover,
+.form-container .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 90%;
+}
+
+.form h2 {
+    font-size: 28px;
+}
+
+.form .form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+    border-radius: var(--border-radius);
+    border: none;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: var(--blue);
+    width: 20px;
+    height: 20px;
+}
+
+.form .btn {
+    width: 100%;
 }
 
 /* Books */
@@ -156,7 +208,7 @@ main {
 
     background-color: var(--white);
 
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     padding: 16px 0;
 
     font-size: 20px;
@@ -166,24 +218,24 @@ main {
     width: 75%;
 }
 
-.btn-not-read,
-.btn-read {
+.btn-red,
+.btn-green {
     color: var(--white);
 }
 
-.btn-not-read {
+.btn-red {
     background-color: var(--red);
 }
 
-.btn-not-read:hover {
+.btn-red:hover {
     background-color: var(--light-red);
 }
 
-.btn-read {
+.btn-green {
     background-color: var(--green);
 }
 
-.btn-read:hover {
+.btn-green:hover {
     background-color: var(--light-green);
 }
 

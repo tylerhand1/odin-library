@@ -24,42 +24,51 @@
                         <p class="title">Lorem Ipsum</p>
                         <p class="author">Lorem Ipsum</p>
                         <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-read">Read</button>
+                        <button class="btn btn-green">Read</button>
                         <button class="btn btn-remove">Remove</button>
                     </div>
                     <div class="book-card">
                         <p class="title">Lorem Ipsum</p>
                         <p class="author">Lorem Ipsum</p>
                         <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-not-read">Not Read</button>
+                        <button class="btn btn-red">Not Read</button>
                         <button class="btn btn-remove">Remove</button>
                     </div>
                     <div class="book-card">
                         <p class="title">Lorem Ipsum</p>
                         <p class="author">Lorem Ipsum</p>
                         <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-not-read">Not Read</button>
+                        <button class="btn btn-red">Not Read</button>
                         <button class="btn btn-remove">Remove</button>
                     </div>
                     <div class="book-card">
                         <p class="title">Lorem Ipsum</p>
                         <p class="author">Lorem Ipsum</p>
                         <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-not-read">Not Read</button>
+                        <button class="btn btn-red">Not Read</button>
                         <button class="btn btn-remove">Remove</button>
                     </div>
                     <div class="book-card">
                         <p class="title">Lorem Ipsum</p>
                         <p class="author">Lorem Ipsum</p>
                         <p class="status">Lorem Ipsum</p>
-                        <button class="btn btn-not-read">Not Read</button>
+                        <button class="btn btn-red">Not Read</button>
                         <button class="btn btn-remove">Remove</button>
                     </div>
                 </div>
                 <div class="modal">
-                    <div class="form">
-                        <span class="close">&times;</span>
-                        <p>Some text in the Modal..</p>
+                    <div class="form-container">
+                        <form action="#" class="form">
+                            <h2>Add new book</h2>
+                            <input type="text" placeholder="Title" id="title" name="title" required>
+                            <input type="text" placeholder="Author" id="author" name="author" required>
+                            <input type="number" placeholder="Pages" id="pages  " name="pages " min="0" required>
+                            <div class="form-row">
+                                <label for="have-read">Have you read it?</label>
+                                <input type="checkbox" name="have-read" id="have-read">
+                            </div>
+                            <button type="submit" class="btn btn-green">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
