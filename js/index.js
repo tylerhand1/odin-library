@@ -1,12 +1,21 @@
 const myLibrary = [];
 
-function Book() {
-
+function Book(title, author, pageNum, haveRead) {
+    this.title = title
+    this.author = author
+    this.pageNum = pageNum
+    this.haveRead = haveRead
 }
 
 function addToLibrary() {
     
 }
+
+function removeFromLibrary() {
+    
+}
+
+// Form modal logic
 
 const modal = document.querySelector('.modal');
 const closeBtn = document.querySelector('.close');
